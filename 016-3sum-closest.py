@@ -9,7 +9,6 @@ class Solution(object):
         length = len(nums)
         result = nums[0] + nums[1] + nums[2]
         best_diff = abs(target - result)
-        print(nums)
         for i in range(length - 1):
             x = nums[i]
             y_ptr = i + 1
@@ -17,7 +16,6 @@ class Solution(object):
             
             while y_ptr < z_ptr:
                 current_sum = x + nums[y_ptr] + nums[z_ptr]
-                print("cs", current_sum)
                 current_diff = target - current_sum
                 if abs(current_diff) < best_diff:
                     result = current_sum
